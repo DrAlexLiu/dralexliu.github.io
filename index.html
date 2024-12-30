@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Xingchen Liu - Personal Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -13,100 +14,120 @@
             color: #333;
         }
         
+        .top-nav {
+            background: #fff;
+            padding: 1rem;
+            text-align: right;
+            border-bottom: 1px solid #e9ecef;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-right: 2rem;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #495057;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #228be6;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            margin-top: 4rem; /* Account for fixed nav */
         }
-        
-        header {
-            background: #f8f9fa;
-            padding: 2rem 0;
-            text-align: center;
-            border-bottom: 1px solid #e9ecef;
-        }
-        
-        .hero {
+
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 3rem;
             margin: 3rem 0;
         }
-        
+
+        .profile-image {
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-content {
+            flex: 1;
+        }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #212529;
         }
-        
-        .subtitle {
-            font-size: 1.25rem;
-            color: #6c757d;
+
+        .bio {
+            font-size: 1.1rem;
+            color: #495057;
             margin-bottom: 2rem;
         }
-        
-        .content-section {
-            margin-bottom: 3rem;
+
+        .resume-note {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 2rem;
         }
-        
-        .contact {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .social-links {
-            margin-top: 1rem;
-        }
-        
-        .social-links a {
-            margin: 0 10px;
-            color: #495057;
+
+        a {
+            color: #228be6;
             text-decoration: none;
         }
-        
-        .social-links a:hover {
-            color: #228be6;
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Dr. Alex Liu</h1>
-            <div class="subtitle">Welcome to my personal website</div>
+    <nav class="top-nav">
+        <div class="social-icons">
+            <a href="https://scholar.google.com/citations?user=lPi27f4AAAAJ&hl=en" target="_blank" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alexliupeng" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/DrAlexLiu" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
         </div>
-    </header>
+    </nav>
 
     <main class="container">
-        <section class="hero">
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm Dr. Alex Liu. This is my personal website where I share my work, 
-                research, and thoughts on various topics.
-            </p>
-        </section>
-
-        <section class="content-section">
-            <h2>Research Interests</h2>
-            <p>
-                [Your research interests and areas of expertise go here]
-            </p>
-        </section>
-
-        <section class="content-section">
-            <h2>Publications</h2>
-            <p>
-                [Your notable publications and work go here]
-            </p>
-        </section>
-
-        <section class="contact">
-            <h2>Get in Touch</h2>
-            <p>Feel free to reach out to me for collaborations or discussions.</p>
-            <div class="social-links">
-                <a href="https://github.com/DrAlexLiu" target="_blank">GitHub</a>
-                <!-- Add more social links as needed -->
+        <div class="profile-section">
+            <img src="images/profile.jpg" alt="Dr. Xingchen Liu" class="profile-image">
+            <div class="profile-content">
+                <h1>Dr. Xingchen Liu</h1>
+                <div class="bio">
+                    <p>
+                        I am working at the GenAI 3D team in Meta led by <a href="https://ai.meta.com/people/847410227285977/natalia-neverova/" target="_blank">Dr. Natalia Neverova</a> and <a href="https://www.robots.ox.ac.uk/~vedaldi/" target="_blank">Prof. Andrea Vedaldi</a>, specializing in Generative AI, Computer Vision, and 3D reconstruction/generation technologies.
+                    </p>
+                    <p>
+                        Previously, as a Postdoctoral Researcher at the University of Toronto under <a href="https://www.zou-mse-utoronto-ca.net/" target="_blank">Professor Yu Zou</a>'s supervision, I successfully developed a failure detection system for 3D printing.
+                    </p>
+                    <p>
+                        I completed my Ph.D. at the University of Toronto under <a href="https://arlmls.mie.utoronto.ca/" target="_blank">Professor Kamran Behdinan</a>'s supervision, where I developed analytical-numerical algorithms for fast diffusion calculations for various applications, significantly reducing computation time from hours to seconds.
+                    </p>
+                    <p class="resume-note">
+                        Resume available upon request.
+                    </p>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 </html>
